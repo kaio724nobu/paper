@@ -1,0 +1,367 @@
+body {
+    font-family: 'Sawarabi Mincho', serif;
+    color: #4a4a4a;
+    line-height: 1.9; /* 行間を広げて読みやすく */
+    background-color: #fdfdfd; /* わずかに温かみのある白 */
+    font-size: 1.15rem; /* 全体的に少し大きく */
+}
+
+h1, h2, h5, .navbar-brand, .card-header {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #8b008b; /* 紫色 */
+}
+
+h1 {
+    font-size: 4.2rem; /* タイトルをさらに大きく */
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-top: 1rem; /* タイトルを少し下に移動 */
+}
+
+h2 {
+    font-size: 2.7rem; /* 見出しを少し大きく */
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #4682b4; /* スチールブルー */
+}
+
+.lead {
+    font-size: 1.45rem; /* リード文を少し大きく */
+    color: #6a6a6a;
+    font-weight: 400;
+}
+
+/* ナビゲーションバー */
+.navbar {
+    background-color: #f0f8ff !important; /* アリスブルー */
+    border-bottom: 1px solid #e6e6fa; /* ラベンダーブラッシュ */
+}
+
+.navbar-brand {
+    font-size: 1.9rem; /* ブランド名を少し大きく */
+    color: #8b008b !important;
+}
+
+.nav-link {
+    color: #6a6a6a !important;
+    font-weight: 700;
+    margin-left: 15px;
+    font-size: 1.15rem; /* ナビリンクを少し大きく */
+}
+
+.nav-link:hover {
+    color: #4682b4 !important;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(to bottom right, #e0ffff, #add8e6); /* ライトシアンからライトスティールブルー */
+    padding: 18rem 0 5rem 0; /* タイトルが見切れないようにパディングをさらに調整 */
+    color: #8b008b;
+}
+
+/* カード */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-header {
+    background-color: #b0e0e6; /* パウダーブルー */
+    color: #4682b4;
+    border-radius: 15px 15px 0 0 !important;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.7rem; /* カードヘッダーを少し大きく */
+}
+
+.card-title {
+    color: #8b008b;
+    font-size: 2.3rem; /* カードタイトルを少し大きく */
+}
+
+.pricing-card-title small {
+    font-size: 60%;
+}
+
+.card-img-container {
+    width: 100%;
+    padding-top: 75%; /* 4:3 アスペクト比 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* 仮の背景色 */
+}
+
+.card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ボタン */
+.btn-primary {
+    background-color: #ff6347; /* トマト色 */
+    border-color: #ff6347;
+    padding: 0.9rem 2.8rem;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #e5533d;
+    border-color: #e5533d;
+    transform: translateY(-3px);
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+}
+
+/* リストアイコン */
+.list-unstyled .bi-check-circle-fill {
+    color: #66cdaa; /* ミディアムアクアマリン */
+}
+
+.list-unstyled .bi-x-circle-fill {
+    color: #cd5c5c; /* インディアンレッド */
+}
+
+/* フッター */
+footer {
+    background-color: #f0f8ff; /* アリスブルー */
+    padding: 3rem 0;
+    color: #6a6a6a;
+}
+
+footer a {
+    color: #4682b4;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 折り紙風装飾 */
+.origami-decoration {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0.6;
+    z-index: -1; /* 背景に配置 */
+}
+
+.origami-triangle-1 {
+    border-width: 0 100px 100px 0;
+    border-color: transparent #b0e0e6 transparent transparent; /* パウダーブルー */
+    top: 50px;
+    left: 50px;
+    transform: rotate(20deg);
+}
+
+.origami-triangle-2 {
+    border-width: 120px 120px 0 0;
+    border-color: #e6e6fa transparent transparent transparent; /* ラベンダーブラッシュ */
+    bottom: 80px;
+    right: 80px;
+    transform: rotate(-30deg);
+}
+
+.origami-fold {
+    width: 150px;
+    height: 150px;
+    background-color: #add8e6; /* ライトスティールブルー */
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.origami-fold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, transparent 50%, rgba(0,0,0,0.1) 50%);
+}
+
+.origami-fold-1 {
+    top: 200px;
+    right: 100px;
+}
+
+.origami-fold-2 {
+    bottom: 150px;
+    left: 100px;
+    transform: rotate(135deg);
+}
+
+/* 新しい折り紙装飾 */
+.origami-triangle-3 {
+    border-width: 0 80px 80px 0;
+    border-color: transparent #ffe4e1 transparent transparent; /* ミスティローズ */
+    top: 300px;
+    right: 30px;
+    transform: rotate(60deg);
+    opacity: 0.7;
+}
+
+.origami-triangle-4 {
+    border-width: 90px 0 0 90px;
+    border-color: transparent transparent transparent #afeeee; /* ペールターコイズ */
+    bottom: 200px;
+    left: 50px;
+    transform: rotate(-10deg);
+    opacity: 0.5;
+}
+
+.origami-fold-3 {
+    width: 100px;
+    height: 100px;
+    background-color: #dda0dd; /* プラム */
+    top: 100px;
+    left: 40%;
+    transform: rotate(25deg);
+    opacity: 0.4;
+}
+
+.origami-fold-4 {
+    width: 180px;
+    height: 180px;
+    background-color: #b0e0e6; /* パウダーブルー */
+    bottom: 50px;
+    right: 40%;
+    transform: rotate(160deg);
+    opacity: 0.3;
+}
+
+.origami-triangle-5 {
+    border-width: 0 60px 60px 0;
+    border-color: transparent #f0e68c transparent transparent; /* カーキ */
+    top: 50%;
+    left: 10%;
+    transform: rotate(90deg);
+    opacity: 0.8;
+}
+
+.origami-fold-5 {
+    width: 120px;
+    height: 120px;
+    background-color: #98fb98; /* ペールグリーン */
+    top: 20%;
+    right: 5%;
+    transform: rotate(75deg);
+    opacity: 0.6;
+}
+
+/* さらに追加する折り紙装飾 */
+.origami-triangle-6 {
+    border-width: 0 70px 70px 0;
+    border-color: transparent #ffb6c1 transparent transparent; /* ライトピンク */
+    bottom: 10px;
+    left: 20%;
+    transform: rotate(10deg);
+    opacity: 0.7;
+}
+
+.origami-fold-6 {
+    width: 90px;
+    height: 90px;
+    background-color: #afeeee; /* ペールターコイズ */
+    bottom: 30px;
+    right: 10%;
+    transform: rotate(200deg);
+    opacity: 0.5;
+}
+
+.origami-triangle-7 {
+    border-width: 80px 80px 0 0;
+    border-color: #dda0dd transparent transparent transparent; /* プラム */
+    top: 10%;
+    left: 5%;
+    transform: rotate(150deg);
+    opacity: 0.4;
+}
+
+.origami-fold-7 {
+    width: 110px;
+    height: 110px;
+    background-color: #f0e68c; /* カーキ */
+    bottom: 250px;
+    left: 15%;
+    transform: rotate(30deg);
+    opacity: 0.6;
+}
+
+.origami-triangle-8 {
+    border-width: 0 50px 50px 0;
+    border-color: transparent #98fb98 transparent transparent; /* ペールグリーン */
+    top: 80%;
+    right: 5%;
+    transform: rotate(270deg);
+    opacity: 0.8;
+}
+
+.origami-fold-8 {
+    width: 130px;
+    height: 130px;
+    background-color: #ff6347; /* トマト色 */
+    top: 60%;
+    left: 25%;
+    transform: rotate(100deg);
+    opacity: 0.3;
+}
+
+/* さらに追加する折り紙装飾 (下部向け) */
+.origami-triangle-9 {
+    border-width: 0 90px 90px 0;
+    border-color: transparent #b0e0e6 transparent transparent; /* パウダーブルー */
+    bottom: 100px;
+    left: 30%;
+    transform: rotate(45deg);
+    opacity: 0.6;
+}
+
+.origami-fold-9 {
+    width: 160px;
+    height: 160px;
+    background-color: #e6e6fa; /* ラベンダーブラッシュ */
+    bottom: 50px;
+    right: 20%;
+    transform: rotate(220deg);
+    opacity: 0.4;
+}
+
+.origami-triangle-10 {
+    border-width: 70px 70px 0 0;
+    border-color: #ffe4e1 transparent transparent transparent; /* ミスティローズ */
+    bottom: 300px;
+    left: 5%;
+    transform: rotate(180deg);
+    opacity: 0.5;
+}
+
+.origami-fold-10 {
+    width: 100px;
+    height: 100px;
+    background-color: #afeeee; /* ペールターコイズ */
+    top: 90%;
+    left: 60%;
+    transform: rotate(10deg);
+    opacity: 0.7;
+}
